@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://did1l1ekehfc5"]
+
+[ext_resource type="Script" path="res://postacie/gracz.gd" id="1_yxqra"]
+[ext_resource type="Texture2D" uid="uid://b7rwlpglaxars" path="res://asety/przemek.png" id="2_t8uno"]
+[ext_resource type="Shape2D" uid="uid://d1s21h3776ldc" path="res://obiekty/gracz.tres" id="3_d7ept"]
+
+[node name="gracz" type="CharacterBody2D"]
+script = ExtResource("1_yxqra")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_t8uno")
+
+[node name="graczCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 0)
+shape = ExtResource("3_d7ept")
+
+[node name="graczCamera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true

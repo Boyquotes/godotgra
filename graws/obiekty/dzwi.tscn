@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://xvql8tpko47"]
+
+[ext_resource type="Script" path="res://obiekty/dzwi.gd" id="1_5me4r"]
+[ext_resource type="Texture2D" uid="uid://cfvvnunoj6dpe" path="res://asety/mapa1_p2/dzwi.png" id="1_728ml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1j31"]
+size = Vector2(64, 121.906)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_5me4r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_728ml")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+scale = Vector2(0.992024, 1.04999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+scale = Vector2(0.997238, 1)
+shape = SubResource("RectangleShape2D_y1j31")
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]

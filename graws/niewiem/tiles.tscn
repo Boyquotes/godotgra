@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0b48b8hjqdma"]
+
+[ext_resource type="Texture2D" uid="uid://bapbcbao57okc" path="res://asety/mapa1/ziemia.png" id="1_i7l33"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yxkl"]
+size = Vector2(64, 64)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_i7l33")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+shape = SubResource("RectangleShape2D_5yxkl")
